@@ -8,7 +8,9 @@ posts, with an approval flow where two different user types may interact.
 Install the following programs in case you do not have the correct operation of the application.
 
 Visual Studio 2019 URL: https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Community&rel=16
+<br />
 .NET Framework 5.0 URL: https://dotnet.microsoft.com/download/dotnet-framework/net48
+<br />
 Sql Server URL: https://go.microsoft.com/fwlink/?linkid=866662
 
 Management Studio: https://aka.ms/ssmsfullsetup
