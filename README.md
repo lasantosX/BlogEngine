@@ -38,14 +38,17 @@ To access the application, do so with the default users and passwords provided b
 
 ADMINISTRATOR
 User: administrator
+<br />
 Password: AdminBlog *
 
 WRITER
 User: writer
+<br />
 Password: writer *
 
 EDITOR
 User: editor
+<br />
 Password: editor *
 
 The administrator user has an administrator role, so with this you can access all the functionalities, create new users and assign them a role.
