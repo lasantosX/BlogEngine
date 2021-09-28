@@ -1,0 +1,48 @@
+﻿@model AppBlogEngine.Models.Published
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Published</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.textContent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.textContent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.datePublishing)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.datePublishing)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idUser)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idUser)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idPublished">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

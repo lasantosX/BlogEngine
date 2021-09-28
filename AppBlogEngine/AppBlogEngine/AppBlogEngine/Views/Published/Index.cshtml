@@ -1,0 +1,62 @@
+﻿@model IEnumerable<AppBlogEngine.Models.Published>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Published</h1>
+
+@*<p>
+    <a asp-action="MyPublish" asp-controller="Published" asp-route-id="1">My Posts</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.textContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datePublishing)
+            </th>
+           @* <th>
+                @Html.DisplayNameFor(model => model.idUser)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            @if (item.status == 2)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.textContent)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.datePublishing)
+                    </td>
+                    @* <td>
+                        @Html.DisplayFor(modelItem => item.idUser)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.status)
+                    </td>
+                    <td>
+                        <a asp-action="Index" asp-controller="Comments" asp-route-id="@item.idPublished">Add comments</a>@*  |
+                            <a asp-action="Details" asp-route-id="@item.idPublished">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.idPublished">Delete</a>*@
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

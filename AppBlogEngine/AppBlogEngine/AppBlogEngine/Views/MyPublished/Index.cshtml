@@ -1,0 +1,99 @@
+﻿@model IEnumerable<AppBlogEngine.Models.Published>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.textContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datePublishing)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.idUser)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Comment)
+                </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            if (item.idUser.ToString() == TempData["idUser"].ToString())//el uno es el id del user que hay que sacar.
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.textContent)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.datePublishing)
+                    </td>
+                   @* <td>
+                        @Html.DisplayFor(modelItem => item.idUser)
+                    </td>*@
+                    <td>
+                        @{
+                
+                            StatePublished states = new StatePublished();
+                            List<StatePublished> statePublishedL = states.ListStates();
+                        }
+
+                        @foreach(var itemS in statePublishedL)
+                        {
+                            @if (itemS.value == item.status)
+                            {
+                                 @Html.DisplayFor(modelItem => itemS.nameState)
+                            }                          
+                        }
+
+                        
+                    </td>
+                    @if (item.status == 3)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Comment)
+                        </td>
+                    }
+                    else
+                    {
+                    <td></td>
+                    }
+                    <td>
+
+                        @if (item.status == 0 || item.status == 3)
+                        {
+                            <a class="text-primary" asp-action="SubmitPosts" asp-route-id="@item.idPublished">Submit</a> 
+                           @* <a class="text-secondary" asp-action="Edit" asp-route-id="@item.idPublished">Edit</a>*@
+                        }
+
+                        <a class="text-secondary" asp-action="Details" asp-route-id="@item.idPublished">Details</a> 
+                        @if (item.status == 0 || item.status == 3)
+                        {
+                            <a class="text-danger" asp-action="Delete" asp-route-id="@item.idPublished">Delete</a>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
