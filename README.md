@@ -37,16 +37,19 @@ Then run solution by pressing the key combination (Ctrl + F5). IMPORTANT do not 
 To access the application, do so with the default users and passwords provided below:
 
 ADMINISTRATOR
+<br />
 User: administrator
 <br />
 Password: AdminBlog *
 
 WRITER
+<br />
 User: writer
 <br />
 Password: writer *
 
 EDITOR
+<br />
 User: editor
 <br />
 Password: editor *
