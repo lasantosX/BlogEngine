@@ -20,14 +20,14 @@ Management Studio: https://aka.ms/ssmsfullsetup
 
 <b>2.- How to run the application WEB API</b>
 <br />
-Open the WebAPI solution (WebApiBlogEngine) found in the WebApiBlogEngine folder from the WebApiBlogEngine.sln file
+Open the WebAPI solution (AppBlogEngine/WebApiBlogEngine) found in the WebApiBlogEngine folder from the WebApiBlogEngine.sln file
 
 In solution explorer right click on the application and then click on the Compile option.
 
 Then run solution by pressing the key combination (Ctrl + F5)
 
 <b>.NET CORE APPLICATION.</b>
-Open the application solution (AppBlogEngine) found in the AppBlogEngine folder from the AppBlogEngine.sln file
+Open the application solution (AppBlogEngine/AppBlogEngine) found in the AppBlogEngine folder from the AppBlogEngine.sln file
 
 In solution explorer right click on the application and then click on the Compile option.
 
