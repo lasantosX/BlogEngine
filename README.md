@@ -55,3 +55,5 @@ User: editor
 Password: editor *
 
 The administrator user has an administrator role, so with this you can access all the functionalities, create new users and assign them a role.
+
+Hours to complete the application - 20
