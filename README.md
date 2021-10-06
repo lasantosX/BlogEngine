@@ -16,7 +16,7 @@ Sql Server URL: https://go.microsoft.com/fwlink/?linkid=866662
 Management Studio: https://aka.ms/ssmsfullsetup
 
 # STEPS TO OPERATE THE APPLICATION
-1.- Execute script called (SCRIPT DB BlogEngine) hosted in folder (SCRIPT) from SQL Management Studio.
+1.- First open the program sql server Managemet Studio, then create a database named (BlogEngine), Execute script called (SCRIPT DB BlogEngine) hosted in folder (SCRIPT) from SQL Management Studio.
 
 <b>2.- How to run the application WEB API</b>
 <br />
